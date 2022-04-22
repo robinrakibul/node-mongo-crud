@@ -20,13 +20,23 @@ app.get('/',(req,res)=>{
 
 const uri = "mongodb+srv://dbuser1:LlGf6EfsbWgL6qsL@cluster0.ntqok.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  console.log('db connected')
-  // perform actions on the collection object
-  client.close();
-});
 
+async function run() {
+    try{
+        await client.connect();
+        const userCollection = client.db("foodExpress").collection("user");
+        const user = {name: 'MyName', email:'test@gmail.com'}
+
+        const result = await userCollection.insertOne(user);
+        console.log(`User Inserted with id: ${result.insertedId}`)
+    } 
+    finally{
+      // await client.close();
+    }
+}
+
+
+run().catch(console.dir);
 
 app.listen(port,()=>{
     console.log("CRUD my server is running")
