@@ -22,4 +22,13 @@
  * ==========================
  * 1. node mongodb CRUD Fundamentals
  * 2. create async await run function
+ * 
+ * 
+ * -------------------------
+ * integrate SENDING DATA FROM CLIENT TO SERVER
+ * -------------------------
+ * 1. CLIENT side -> Create form, create user object
+ * 2. on submit
+ * 3. on SERVER: create user POST method to receive data on backend
+ * 4. on client side: set fetch with POST, headers, body
  */
