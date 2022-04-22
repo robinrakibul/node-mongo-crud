@@ -31,4 +31,12 @@
  * 2. on submit
  * 3. on SERVER: create user POST method to receive data on backend
  * 4. on client side: set fetch with POST, headers, body
+ * --------------------------
+ * LOAD Data to the client side
+ * --------------------------
+ * 1. create get API
+ * 2. create a query
+ * 3. collection.find(query)
+ * 4. cursor.toArray()
+ * 5. return the result
  */
