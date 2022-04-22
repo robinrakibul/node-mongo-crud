@@ -39,4 +39,6 @@
  * 3. collection.find(query)
  * 4. cursor.toArray()
  * 5. return the result
+ * 6. fetch client useEffect and display like I have done before
+ * -----------------------------
  */
